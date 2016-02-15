@@ -70,3 +70,6 @@ def transcribe(srcpath):
         print "timeout"
         pass
     return False
+
+def uncensor(content):
+    return content
