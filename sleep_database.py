@@ -4,9 +4,12 @@ import subprocess
 
 import requests
 
-import transcription
+from transcription import Transcriber
+
+TRANSCRIPTION_PATH = "transcription_data"
 
 seen_users = set()
+trans = Transcriber()
 
 
 def file_escape(string):
@@ -22,8 +25,8 @@ def download_file(url, filename):
 
 
 def save_transcription(text, name, entry):
-    dstpath = os.path.join(".", "transcriptions", name + ".txt")
-    path2 = os.path.join(".", "text", name + ".txt")
+    dstpath = os.path.join(".", TRANSCRIPTION_PATH, "transcriptions", name + ".txt")
+    path2 = os.path.join(".", TRANSCRIPTION_PATH, "text", name + ".txt")
     info = {
         "user": entry['username'],
         "date": entry['date'],
@@ -56,12 +59,12 @@ def request_chunk(offset, country_code="US"):
             continue
 
         clip_name = file_escape(entry['clipName'])
-        filename = "{}_{}".format(username, clip_name)
-        mp3_name = "data/{}.mp3".format(filename)
+        filename = file_escape("{}_{}".format(username, clip_name))
+        mp3_name = os.path.join(".", TRANSCRIPTION_PATH, "data", "{}.mp3".format(filename))
         download_file(entry['clipPath'], mp3_name)
-        wav_name = transcription.create_wav(mp3_name)
+        wav_name = trans.create_wav(mp3_name)
         if wav_name:
-            text = transcription.transcribe(wav_name)
+            text = trans.transcribe(wav_name)
             if text:
                 seen_users.add(username)
                 save_transcription(text, filename, entry)
@@ -75,6 +78,12 @@ def download_audio_files(start_offset=0):
     seen_users = set()
     offset = start_offset
     total_transcribed = 0
+
+    paths = ["./{}/data".format(TRANSCRIPTION_PATH), "./{}/text".format(TRANSCRIPTION_PATH),
+             "./{}/transcriptions".format(TRANSCRIPTION_PATH)]
+    for dir in paths:
+        if not os.path.exists(dir):
+            os.makedirs(dir)
     while True:
         (amt, total) = request_chunk(offset)
         if total == 0:
@@ -85,5 +94,5 @@ def download_audio_files(start_offset=0):
 
 
 def clean():
-    subprocess.call("cd /Users/jameslennon/PycharmProjects/Sleeptalking && rm data/* gen/* text/* transcriptions/*",
+    subprocess.call("cd /Users/jameslennon/PycharmProjects/sleeptalking-transcription && rm -rf transcription_data/*",
                     shell=True)
