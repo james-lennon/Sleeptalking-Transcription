@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63b10295-f1c6-44b3-948e-27fae655a6c5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/uncensor-data.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sleeptalking-transcription.iml" afterPath="$PROJECT_DIR$/.idea/sleeptalking-transcription.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transcription.py" afterPath="$PROJECT_DIR$/transcription.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/uncensor-data.txt" afterPath="$PROJECT_DIR$/config/uncensor-data.txt" />
     </list>
     <ignored path="sleeptalking-transcription.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,8 +38,8 @@
       <file leaf-file-name="uncensor-data.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/uncensor-data.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7">
-              <caret line="147" column="5" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.87142855">
+              <caret line="229" column="5" selection-start-line="229" selection-start-column="5" selection-end-line="229" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -365,8 +361,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/uncensor-data.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7">
-          <caret line="147" column="5" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.87142855">
+          <caret line="229" column="5" selection-start-line="229" selection-start-column="5" selection-end-line="229" selection-end-column="5" />
           <folding />
         </state>
       </provider>
