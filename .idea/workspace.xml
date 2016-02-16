@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63b10295-f1c6-44b3-948e-27fae655a6c5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transcription_data/text/MikeyJHitz_scream.txt" afterPath="$PROJECT_DIR$/transcription_data/text/MikeyJHitz_scream.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transcription_data/text/TheSilencedMasses_Fing_Pigeon.txt" afterPath="$PROJECT_DIR$/transcription_data/text/TheSilencedMasses_Fing_Pigeon.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transcription_data/text/certifiedsavage_wait_wait_wait_WTF_is_this_WTF.txt" afterPath="$PROJECT_DIR$/transcription_data/text/certifiedsavage_wait_wait_wait_WTF_is_this_WTF.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transcription_data/text/sadielady_Peeing_on_snowman.txt" afterPath="$PROJECT_DIR$/transcription_data/text/sadielady_Peeing_on_snowman.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transcription.py" afterPath="$PROJECT_DIR$/transcription.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/uncensor-data.txt" afterPath="$PROJECT_DIR$/config/uncensor-data.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transcription_data/text/zakattack334_Get_the_f_away_from_my_waffles.txt" afterPath="$PROJECT_DIR$/transcription_data/text/zakattack334_Get_the_f_away_from_my_waffles.txt" />
     </list>
     <ignored path="sleeptalking-transcription.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="transcription.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="transcription.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/transcription.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.4714285">
-              <caret line="96" column="18" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="104" column="20" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -48,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="uncensor-data.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="uncensor-data.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/uncensor-data.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="166" column="7" selection-start-line="166" selection-start-column="7" selection-end-line="166" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.4680535">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -66,9 +72,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/uncensor-data.txt" />
         <option value="$PROJECT_DIR$/sleep_database.py" />
         <option value="$PROJECT_DIR$/transcription.py" />
+        <option value="$PROJECT_DIR$/config/uncensor-data.txt" />
       </list>
     </option>
   </component>
@@ -378,14 +384,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/uncensor-data.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="166" column="7" selection-start-line="166" selection-start-column="7" selection-end-line="166" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sleep_database.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -398,11 +396,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/transcription.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4714285">
-          <caret line="96" column="18" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="104" column="20" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/uncensor-data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4680535">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -76,7 +76,7 @@ class Transcriber:
             pass
         except TimeoutException:
             # request timed out
-            print "timeout"
+            # print "timed out on {}".format(srcpath)
             pass
         return False
 
@@ -84,14 +84,23 @@ class Transcriber:
         with open("config/uncensor-data.txt") as openfile:
             words = openfile.read().split("\n")
             for w in words:
-                self.cuss_words[len(w)] = w
+                if len(w) == 0: continue
+                c = w[0].lower()
+                if c not in self.cuss_words:
+                    self.cuss_words[c] = {}
+                self.cuss_words[c][len(w)] = w
 
     def _uncensor(self, content):
         words = content.split(" ")
         for i in range(len(words)):
-            w = words[i]
+            w = words[i].lower()
             if w.find("*") > -1:
+                if len(w) == 0: continue
                 n = len(w)
-                if n in self.cuss_words:
-                    words[i] = self.cuss_words[n]
+                c = w[0]
+                if c in self.cuss_words and n in self.cuss_words[c]:
+                    words[i] = self.cuss_words[c][n]
+                    print("replaced {} with {}".format(w, words[i]))
+                else:
+                    print("couldn't uncensor {}".format(w))
         return " ".join(words)
