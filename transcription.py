@@ -24,7 +24,8 @@ def time_limit(seconds):
 
 class Transcriber:
     def __init__(self):
-        pass
+        self.cuss_words = {}
+        self._load_uncensor()
 
     def create_wav(self, srcpath):
         if not os.path.isfile(srcpath):
@@ -36,7 +37,7 @@ class Transcriber:
         sound.export(dstpath, format="wav")
         return dstpath
 
-    def transcribe(self, srcpath):
+    def transcribe(self, srcpath, uncensor=True):
         if not os.path.isfile(srcpath):
             return False
 
@@ -61,7 +62,12 @@ class Transcriber:
                 return False
 
             # return first result
-            return matches['alternative'][0]['transcript']
+            text = matches['alternative'][0]['transcript']
+
+            if uncensor:
+                text = self._uncensor(text)
+
+            return text
         except sr.UnknownValueError:
             # unable to transcribe
             pass
@@ -74,8 +80,18 @@ class Transcriber:
             pass
         return False
 
-    def uncensor(self, content):
+    def _load_uncensor(self):
+        with open("config/uncensor-data.txt") as openfile:
+            words = openfile.read().split("\n")
+            for w in words:
+                self.cuss_words[len(w)] = w
+
+    def _uncensor(self, content):
         words = content.split(" ")
-        for w in words:
-            pass
-        return content
+        for i in range(len(words)):
+            w = words[i]
+            if w.find("*") > -1:
+                n = len(w)
+                if n in self.cuss_words:
+                    words[i] = self.cuss_words[n]
+        return " ".join(words)
