@@ -25,7 +25,13 @@ def time_limit(seconds):
 class Transcriber:
     def __init__(self):
         self.cuss_words = {}
+        self.r = sr.Recognizer()
         self._load_uncensor()
+
+        # calibrate energy threshold (sensitivity)
+        self.r.energy_threshold = 100
+        self.r.pause_threshold = 60
+        self.r.pause_threshold = 1
 
     def create_wav(self, srcpath):
         if not os.path.isfile(srcpath):
@@ -41,21 +47,14 @@ class Transcriber:
         if not os.path.isfile(srcpath):
             return False
 
-        r = sr.Recognizer()
-
         with sr.WavFile(srcpath) as source:
             # r.adjust_for_ambient_noise(source)
-            audio = r.record(source)
-
-        # calibrate energy threshold (sensitivity)
-        r.energy_threshold = 100
-        r.pause_threshold = 10
-        r.pause_threshold = 1
+            audio = self.r.record(source)
 
         try:
             # transcribe with 10 second time limit using Google's speech-to-text API
             with time_limit(10):
-                matches = r.recognize_google(audio, show_all=True)
+                matches = self.r.recognize_google(audio, show_all=True)
 
             # check if failed
             if len(matches) == 0:

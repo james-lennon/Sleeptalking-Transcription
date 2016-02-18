@@ -43,7 +43,7 @@ def save_transcription(text, name, entry):
 
 
 def request_chunk(offset, country_code="US"):
-    print "[ processing chunk with offset {} ]".format(offset)
+    # print "[ processing chunk with offset {} ]".format(offset)
 
     url = 'http://data.sleeptalkrecorder.com/data/topList?filter=countryCode=="{}"&offset={}&order=thumbs&time=all' \
         .format(country_code, offset)
@@ -69,7 +69,7 @@ def request_chunk(offset, country_code="US"):
                 seen_users.add(username)
                 save_transcription(text, filename, entry)
                 num_transcribed += 1
-    print "successfully transcribed {} recordings".format(num_transcribed)
+    # print "successfully transcribed {} recordings".format(num_transcribed)
     return num_transcribed, len(data)
 
 
