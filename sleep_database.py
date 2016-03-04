@@ -42,7 +42,7 @@ def save_transcription(text, name, entry):
     return dstpath
 
 
-def request_chunk(offset, country_code="US"):
+def request_chunk(offset, country_code="US", save_files=False):
     # print "[ processing chunk with offset {} ]".format(offset)
 
     url = 'http://data.sleeptalkrecorder.com/data/topList?filter=countryCode=="{}"&offset={}&order=thumbs&time=all' \
@@ -69,11 +69,13 @@ def request_chunk(offset, country_code="US"):
                 seen_users.add(username)
                 save_transcription(text, filename, entry)
                 num_transcribed += 1
+        if not save_files or not text:
+            remove_audio_file(mp3_name)
     # print "successfully transcribed {} recordings".format(num_transcribed)
     return num_transcribed, len(data)
 
 
-def download_audio_files(start_offset=0):
+def download_audio_files(save_audio=False, start_offset=0):
     global seen_users
     seen_users = set()
     offset = start_offset
@@ -85,12 +87,16 @@ def download_audio_files(start_offset=0):
         if not os.path.exists(dir):
             os.makedirs(dir)
     while True:
-        (amt, total) = request_chunk(offset)
+        (amt, total) = request_chunk(offset, save_files=save_audio)
         if total == 0:
             break
         offset += total
         total_transcribed += amt
         print "TOTAL TRANSCRIPTIONS =", total_transcribed
+
+
+def remove_audio_file(filename):
+    subprocess.call("rm {}".format(filename))
 
 
 def clean():
