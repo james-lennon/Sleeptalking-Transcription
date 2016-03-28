@@ -2,35 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63b10295-f1c6-44b3-948e-27fae655a6c5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/Lymn_I_dont_want_the_pigeons_in_my_cereal_.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/MikeyJHitz_scream.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/TheSilencedMasses_Fing_Pigeon.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/bigsteve1261_1800give_a_shit.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/certifiedsavage_wait_wait_wait_WTF_is_this_WTF.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/ihatematt_BIG_FART_Housekeeping.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/jasonbaseball32_Mega_sleep_fart.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/jdizzle204_my_28_yr_old_sister_pees_on_floor.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/joshua_its_not_my_weed_officer.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/moto802_ahhhh_my_nipple.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/ridiculousRambler_All_Our_Stuffs_Gone.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/ridiculousRambler_everywherenooooooooo.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/sadielady_Peeing_on_snowman.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/sleeptalkman1_crazy_poem.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/sleeptalkman1_kill_the_evil_thing.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/sleeptalkman_Great_scream.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/sleeptalkman_get_out_of_the_way.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/sleeptalkman_hate_that_giraffe.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/sleeptalkman_somethings_eaten_butt.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/tris_Harry_potter.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/zakattack334_Get_the_f_away_from_my_waffles.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/data/zalavis_po-po-po-po-Popsicle_cold_red.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/text/Lymn_I_dont_want_the_pigeons_in_my_cereal_.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/text/MikeyJHitz_scream.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/text/TheSilencedMasses_Fing_Pigeon.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/text/certifiedsavage_wait_wait_wait_WTF_is_this_WTF.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/text/sadielady_Peeing_on_snowman.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/text/sleeptalkman_get_out_of_the_way.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/transcription_data/text/zakattack334_Get_the_f_away_from_my_waffles.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sleep_database.py" afterPath="$PROJECT_DIR$/sleep_database.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -69,8 +40,8 @@
       <file leaf-file-name="sleep_database.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sleep_database.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22857143">
-              <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.55">
+              <caret line="97" column="23" selection-start-line="97" selection-start-column="23" selection-end-line="97" selection-end-column="23" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -82,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -108,8 +79,8 @@
       <list>
         <option value="$PROJECT_DIR$/config/uncensor-data.txt" />
         <option value="$PROJECT_DIR$/transcription.py" />
-        <option value="$PROJECT_DIR$/sleep_database.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/sleep_database.py" />
       </list>
     </option>
   </component>
@@ -368,6 +339,114 @@
     <entry file="file://$PROJECT_DIR$/transcription.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sleep_database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="72" column="39" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/uncensor-data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transcription.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sleep_database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="72" column="39" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/uncensor-data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transcription.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sleep_database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/uncensor-data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transcription.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -500,15 +579,15 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sleep_database.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22857143">
-          <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.55">
+          <caret line="97" column="23" selection-start-line="97" selection-start-column="23" selection-end-line="97" selection-end-column="23" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

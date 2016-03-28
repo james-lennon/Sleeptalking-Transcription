@@ -1,0 +1,4 @@
+*.pyc
+.idea/
+gen/
+transcription_data/
