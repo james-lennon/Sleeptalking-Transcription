@@ -99,12 +99,12 @@ def download_audio_files(save_audio=False, start_offset=0, single_file=True, max
         offset += total
         total_transcribed += amt
         print "TOTAL TRANSCRIPTIONS =", total_transcribed
-        if total >= max_count:
+        if total_transcribed >= max_count:
             break
 
     if single_file:
         with open("transcriptions.txt", "w") as outfile:
-            outfile.write(content)
+            outfile.write(content.encode('utf8'))
 
 
 def remove_audio_file(filename):
