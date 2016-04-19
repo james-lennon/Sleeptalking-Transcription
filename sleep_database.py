@@ -1,8 +1,8 @@
-import json
 import os
 import subprocess
 
 import requests
+import atexit
 
 from transcription import Transcriber
 
@@ -10,6 +10,7 @@ TRANSCRIPTION_PATH = "transcription_data"
 
 seen_users = set()
 trans = Transcriber()
+content = ""
 
 
 def file_escape(string):
@@ -81,10 +82,13 @@ def request_chunk(offset, country_code="US", save_files=False, single_file=True)
 
 def download_audio_files(save_audio=False, start_offset=0, single_file=True, max_count=None):
     global seen_users
+    global content
     seen_users = set()
     offset = start_offset
     total_transcribed = 0
-    content = ""
+    # content = ""
+
+    atexit.register(save_files)
 
     paths = ["./{}/data".format(TRANSCRIPTION_PATH), "./{}/text".format(TRANSCRIPTION_PATH),
              "./{}/transcriptions".format(TRANSCRIPTION_PATH)]
@@ -95,7 +99,7 @@ def download_audio_files(save_audio=False, start_offset=0, single_file=True, max
         (amt, total, text) = request_chunk(offset, save_files=save_audio, single_file=single_file)
         if total == 0:
             break
-        content += text
+        content += text.decode(errors="ignore")
         offset += total
         total_transcribed += amt
         print "TOTAL TRANSCRIPTIONS =", total_transcribed
@@ -104,7 +108,14 @@ def download_audio_files(save_audio=False, start_offset=0, single_file=True, max
 
     if single_file:
         with open("transcriptions.txt", "w") as outfile:
-            outfile.write(content.encode('utf8'))
+            # outfile.write(str(unicode(content, errors='ignore')))
+            outfile.write(content.encode('utf-8'))
+
+def save_files():
+    global content
+    with open("transcriptions.txt", "w") as outfile:
+        # outfile.write(str(unicode(content, errors='ignore')))
+        outfile.write(content.encode('utf-8'))
 
 
 def remove_audio_file(filename):

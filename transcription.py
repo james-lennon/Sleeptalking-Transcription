@@ -99,7 +99,7 @@ class Transcriber:
                 c = w[0]
                 if c in self.cuss_words and n in self.cuss_words[c]:
                     words[i] = self.cuss_words[c][n]
-                    print("replaced {} with {}".format(w, words[i]))
-                else:
-                    print("couldn't uncensor {}".format(w))
+                    # print("replaced {} with {}".format(w, words[i]))
+                # else:
+                    # print("couldn't uncensor {}".format(w))
         return " ".join(words)
