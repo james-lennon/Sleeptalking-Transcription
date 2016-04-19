@@ -124,5 +124,5 @@ def remove_audio_file(filename):
 
 
 def clean():
-    subprocess.call("cd /Users/jameslennon/PycharmProjects/sleeptalking-transcription && rm -rf transcription_data/*",
+    subprocess.call("cd ~/sleeptalking-transcription && rm -rf transcription_data/*",
                     shell=True)
