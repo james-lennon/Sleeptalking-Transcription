@@ -102,8 +102,8 @@ def download_audio_files(save_audio=False, start_offset=0, single_file=True, max
         content += text.decode(errors="ignore")
         offset += total
         total_transcribed += amt
-        print "TOTAL TRANSCRIPTIONS =", total_transcribed
-        if total_transcribed >= max_count:
+        print "TOTAL TRANSCRIPTIONS ={}; OFFSET={}".format(total_transcribed, offset)
+        if max_count is not None and total_transcribed >= max_count:
             break
 
     if single_file:
