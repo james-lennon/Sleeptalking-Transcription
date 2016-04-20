@@ -1,12 +1,13 @@
 import os
 import subprocess
+import atexit
 
 import requests
-import atexit
 
 from transcription import Transcriber
 
 TRANSCRIPTION_PATH = "transcription_data"
+AUTOSAVE_COUNT = 100
 
 seen_users = set()
 trans = Transcriber()
@@ -61,7 +62,7 @@ def request_chunk(offset, country_code="US", save_files=False, single_file=True)
             continue
 
         clip_name = file_escape(entry['clipName'])
-        filename = file_escape("{}_{}".format(username, clip_name))
+        filename = file_escape(u"{}_{}".format(username, clip_name.decode(errors="ignore")))
         mp3_name = os.path.join(".", TRANSCRIPTION_PATH, "data", "{}.mp3".format(filename))
         download_file(entry['clipPath'], mp3_name)
         wav_name = trans.create_wav(mp3_name)
@@ -86,6 +87,7 @@ def download_audio_files(save_audio=False, start_offset=0, single_file=True, max
     seen_users = set()
     offset = start_offset
     total_transcribed = 0
+    last_save = 0
     # content = ""
 
     atexit.register(save_files)
@@ -103,6 +105,10 @@ def download_audio_files(save_audio=False, start_offset=0, single_file=True, max
         offset += total
         total_transcribed += amt
         print "TOTAL TRANSCRIPTIONS ={}; OFFSET={}".format(total_transcribed, offset)
+        if total_transcribed / AUTOSAVE_COUNT > last_save:
+            print "AUTOSAVING"
+            save_files()
+            last_save += 1
         if max_count is not None and total_transcribed >= max_count:
             break
 
@@ -110,6 +116,7 @@ def download_audio_files(save_audio=False, start_offset=0, single_file=True, max
         with open("transcriptions.txt", "w") as outfile:
             # outfile.write(str(unicode(content, errors='ignore')))
             outfile.write(content.encode('utf-8'))
+
 
 def save_files():
     global content
