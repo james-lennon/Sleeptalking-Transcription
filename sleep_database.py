@@ -62,8 +62,14 @@ def request_chunk(offset, country_code="US", save_files=False, single_file=True)
             continue
 
         clip_name = file_escape(entry['clipName'])
-        filename = file_escape(u"{}_{}".format(username, clip_name.decode(errors="ignore")))
-        mp3_name = os.path.join(".", TRANSCRIPTION_PATH, "data", "{}.mp3".format(filename))
+        if isinstance(username, str):
+            username = unicode(username, errors="ignore")
+        if isinstance(clip_name, str):
+            clip_name = unicode(clip_name, errors="ignore")
+        filename = file_escape(
+            u"{}_{}".format(username, clip_name))
+        mp3_name = os.path.join(".", TRANSCRIPTION_PATH, "data",
+                                "{}.mp3".format(filename.encode('ascii', errors='ignore')))
         download_file(entry['clipPath'], mp3_name)
         wav_name = trans.create_wav(mp3_name)
         if wav_name:
